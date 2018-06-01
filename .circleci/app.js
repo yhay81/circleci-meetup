@@ -1,11 +1,11 @@
 // circleCI env
 
-// const { basename } = require("path");
+const { basename } = require("path");
 // const { execSync } = require("child_process");
 // const auth = process.env["GH_AUTH_TOKEN"];
 // const username = process.env["CIRCLE_PROJECT_USERNAME"];
 // const repo = process.env["CIRCLE_PROJECT_REPONAME"];
-// const issueNumber = basename("CI_PULL_REQUEST");
+const issueNumber = basename("CI_PULL_REQUEST");
 // const exec = (command, options) =>
 //   execSync(command, options)
 //     .toString("utf8")
@@ -21,19 +21,22 @@
 //local env
 
 const githubBot = require("./githubBot");
-const AUTH = "4bd69b1811bfc46b9835390a8b28356568a79263";
+const AUTH = "30006bc2ad860812ac21c290a1c674df3506ac31";
 const USERNAME = "yhay81";
-const REPO = "circle-github-bot";
+const REPO = "circleci-meetup";
 
 const bot = new githubBot(AUTH, USERNAME, REPO);
 
-const issueNumber = "7";
+// const issueNumber = "2";
 let body = `
-<h3>From Yusuke</h3>
-Demo: <strong>Need change</strong>
+<h3>From CircleCI</h3>
+Demo: <strong>ganbatte</strong>
 `;
-// bot
-//   .review(issueNumber, "REQUEST_CHANGES", body)
-//   .then(data => console.log(data));
+bot
+  .review(issueNumber, "REQUEST_CHANGES", body)
+  .then(data => console.log(data));
 
-bot.comment(issueNumber, body).then(data => console.log(data));
+// bot
+//   .comment(issueNumber, body)
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err));
