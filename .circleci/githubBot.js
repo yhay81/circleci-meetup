@@ -7,7 +7,7 @@ class githubBot {
 
   comment(issueNumber, body) {
     const url = `${this.url}/issues/${issueNumber}/comments`;
-    console.log(url);
+    console.log(url, body);
     return axios.post(url, { body });
   }
 
