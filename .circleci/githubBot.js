@@ -6,7 +6,9 @@ class githubBot {
   }
 
   comment(issueNumber, body) {
-    return axios.post(`${this.url}/issues/${issueNumber}/comments`, { body });
+    const url = `${this.url}/issues/${issueNumber}/comments`;
+    console.log(url);
+    return axios.post(url, { body });
   }
 
   review(issueNumber, event, body) {
