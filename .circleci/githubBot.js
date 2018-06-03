@@ -13,10 +13,9 @@ class githubBot {
   }
 
   review(event, body) {
-    return axios.post(`${this.url}/pulls/${this.issueNumber}/reviews`, {
-      body,
-      event
-    });
+    const url = `${this.url}/pulls/${this.issueNumber}/reviews`;
+    console.log(url, body, event);
+    return axios.post(url, { body, event });
   }
 }
 
