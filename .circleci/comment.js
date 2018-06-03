@@ -1,3 +1,4 @@
+const { basename } = require("path");
 const issueNumber = basename("CI_PULL_REQUEST");
 let body = `
 <h3>From CircleCI</h3>
