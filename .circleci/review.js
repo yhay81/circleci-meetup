@@ -17,4 +17,5 @@ const reviewMessage = `
 
 bot
   .review(issueNumber, "REQUEST_CHANGES", reviewMessage)
-  .then(data => console.log(data));
+  .then(data => console.log(data))
+  .catch(err => console.log(err));

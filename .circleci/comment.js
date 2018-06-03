@@ -1,3 +1,4 @@
+const bot = require("./githubBot");
 const { basename } = require("path");
 const issueNumber = basename("CI_PULL_REQUEST");
 let body = `
