@@ -36,6 +36,6 @@ jobs:
       # run tests!
       - run: yarn test
 
-      - run: node ./.circleci/review.js
+      - run: node ./.circleci/comment.js
 
 

@@ -17,4 +17,12 @@ class githubBot {
   }
 }
 
-module.exports = githubBot;
+const AUTH = process.env["GH_AUTH_TOKEN"];
+const USERNAME = process.env["CIRCLE_PROJECT_USERNAME"];
+const REPO = process.env["CIRCLE_PROJECT_REPONAME"];
+// const AUTH = "30006bc2ad860812ac21c290a1c674df3506ac31";
+// const USERNAME = "yhay81";
+// const REPO = "circleci-meetup";
+const bot = new githubBot(AUTH, USERNAME, REPO);
+
+module.exports = bot;
