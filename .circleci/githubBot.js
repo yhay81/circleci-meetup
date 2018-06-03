@@ -25,6 +25,7 @@ const REPO = process.env["CIRCLE_PROJECT_REPONAME"];
 // const AUTH = "30006bc2ad860812ac21c290a1c674df3506ac31";
 // const USERNAME = "yhay81";
 // const REPO = "circleci-meetup";
+console.log(AUTH);
 const bot = new githubBot(AUTH, USERNAME, REPO);
 
 module.exports = bot;
