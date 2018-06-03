@@ -1,7 +1,4 @@
 const bot = require("./githubBot");
-
-const { basename } = require("path");
-const issueNumber = basename(process.env["CI_PULL_REQUEST"]);
 const { execSync } = require("child_process");
 const exec = (command, options) =>
   execSync(command, options)
@@ -16,6 +13,6 @@ const reviewMessage = `
 `;
 
 bot
-  .review(issueNumber, "REQUEST_CHANGES", reviewMessage)
+  .review("REQUEST_CHANGES", reviewMessage)
   .then(data => console.log(data))
   .catch(err => console.log(err));
