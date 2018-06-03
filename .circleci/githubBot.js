@@ -23,7 +23,6 @@ class githubBot {
 const AUTH = process.env["GH_AUTH_TOKEN"];
 const USERNAME = process.env["CIRCLE_PROJECT_USERNAME"];
 const REPO = process.env["CIRCLE_PROJECT_REPONAME"];
-const ISSUE_NUMBER = process.env["CIRCLE_PR_NUMBER"];
 const PR = process.env["CI_PULL_REQUEST"];
 const ISSUE_NUMBER = PR ? basename(process.env["CI_PULL_REQUEST"]) : "";
 // const AUTH = "";
