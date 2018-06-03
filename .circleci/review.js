@@ -1,7 +1,7 @@
 const bot = require("./githubBot");
 
 const { basename } = require("path");
-const issueNumber = basename("CI_PULL_REQUEST");
+const issueNumber = basename(process.env["CI_PULL_REQUEST"]);
 const { execSync } = require("child_process");
 const exec = (command, options) =>
   execSync(command, options)
