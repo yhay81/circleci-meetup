@@ -8,7 +8,7 @@ const fizzbuzz = function (n) {
   }
 
   if (n % 5 === 0) {
-    return "buz";
+    return "buzz";
   }
 
   return n;
