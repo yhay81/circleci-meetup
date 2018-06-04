@@ -1,4 +1,4 @@
-const fizzbuzz = function(n) {
+const fizzbuzz = function (n) {
   if (n % 3 === 0 && n % 5 === 0) {
     return "fizzbuzz";
   }
@@ -8,7 +8,7 @@ const fizzbuzz = function(n) {
   }
 
   if (n % 5 === 0) {
-    return "buzz";
+    return "buz";
   }
 
   return n;
