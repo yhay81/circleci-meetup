@@ -11,10 +11,10 @@ const REPO = "circleci-meetup";
 const ISSUE_NUMBER = "23";
 
 const url = `https://${AUTH}:x-oauth-basic@api.github.com/repos/${USERNAME}/${REPO}/issues/${ISSUE_NUMBER}/comments`;
-// const body = `
-//   <h3>From CircleCI</h3>
-//   Demo: <strong>Hello world</strong>
-//   `;
+const body = `
+  <h3>From CircleCI</h3>
+  Demo: <strong>Hello world</strong>
+  `;
 
 const { execSync } = require("child_process");
 const testResult = execSync("yarn test")
