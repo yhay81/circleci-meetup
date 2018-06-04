@@ -1,20 +1,20 @@
 const axios = require("axios");
 const { basename } = require("path");
-const AUTH = process.env["GH_AUTH_TOKEN"];
-const USERNAME = process.env["CIRCLE_PROJECT_USERNAME"];
-const REPO = process.env["CIRCLE_PROJECT_REPONAME"];
-const PR = process.env["CI_PULL_REQUEST"];
-const ISSUE_NUMBER = PR ? basename(PR) : "";
-// const AUTH = "";
-// const USERNAME = "yhay81";
-// const REPO = "circleci-meetup";
-// const ISSUE_NUMBER = "19";
+// const AUTH = process.env["GH_AUTH_TOKEN"];
+// const USERNAME = process.env["CIRCLE_PROJECT_USERNAME"];
+// const REPO = process.env["CIRCLE_PROJECT_REPONAME"];
+// const PR = process.env["CI_PULL_REQUEST"];
+// const ISSUE_NUMBER = PR ? basename(PR) : "";
+const AUTH = "1bf17b65b2421e50a30939144eb59d5a274ddbff";
+const USERNAME = "morita657";
+const REPO = "circleci-meetup";
+const ISSUE_NUMBER = "23";
 
 const url = `https://${AUTH}:x-oauth-basic@api.github.com/repos/${USERNAME}/${REPO}/issues/${ISSUE_NUMBER}/comments`;
-// const body = `
-//   <h3>From CircleCI</h3>
-//   Demo: <strong>Hello world</strong>
-//   `;
+const body = `
+  <h3>From CircleCI</h3>
+  Demo: <strong>Hello world</strong>
+  `;
 
 const { execSync } = require("child_process");
 const testResult = execSync("yarn test")
