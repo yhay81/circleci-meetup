@@ -9,7 +9,6 @@ const ISSUE_NUMBER = PR ? basename(PR) : "";
 // const USERNAME = "yhay81";
 // const REPO = "circleci-meetup";
 // const ISSUE_NUMBER = "22";
-// hello
 
 const url = `https://${AUTH}:x-oauth-basic@api.github.com/repos/${USERNAME}/${REPO}/issues/${ISSUE_NUMBER}/comments`;
 // const body = `
