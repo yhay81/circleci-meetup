@@ -34,11 +34,11 @@ const { basename } = require("path");
 const AUTH = "";
 const USERNAME = "yhay81";
 const REPO = "circleci-meetup";
-const ISSUE_NUMBER = "19";
+const ISSUE_NUMBER = "1";
 
 const url = `https://${AUTH}:x-oauth-basic@api.github.com/repos/${USERNAME}/${REPO}/issues/${ISSUE_NUMBER}/comments`;
 const body = `
-  <h3>From CircleCI</h3>
+  <h3>From Local</h3>
   Demo: <strong>Hello world</strong>
   `;
 
@@ -47,6 +47,7 @@ const body = `
 //   .toString("utf8")
 //   .trim();
 // const body = `
+// <h3>From CircleCI</h3>
 // <pre>${testResult}</pre>
 // `;
 
