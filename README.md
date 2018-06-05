@@ -21,39 +21,41 @@ cd circleci-meetup
 yarn install
 ```
 
-### 2.Play with `.circleci/comment_from_local.js`
+### 2.Play with .circleci/comment_from_local.js
 
 - You can send comment to GitHub Issues with command `node .cicleci/comment_from_local.js`
 - But before that you need to change some variables in `.cicleci/comment_from_local.js` for fitting your forked repository.
-  - `AUTH`: Add your `Personal access tokens` into `AUTH` to add permission to comment.
+  - `AUTH`: Add your _Personal access tokens_ into `AUTH` to add permission to comment.
     You can get it from https://github.com/settings/tokens.
-    And make sure checking `public_repo Access public repositories`.
+    And make sure checking _public_repo Access public repositories_.
   - `USERNAME`: Change it into your username.
   - `ISSUE_NUMBER`: Add issue number you want to add comment. At first, your forked repo has no issues, so you need to make a issue from repo on GitHub web page.
 
 ### 3.Connect your repository with CircleCI
 
 - Go to CircleCI web page [https://circleci.com](https://circleci.com/)
-- Sign Up with GitHub (, if you do not have account).
-- from `ADD PROJECTS`, add `circleci-meetup` repository.
+- Sign Up with GitHub (if you do not have account).
+- from _ADD PROJECTS_, add _circleci-meetup_ repository.
 - (You can get default config.yml(Linux/node). Compare with `.circleci/config.yml` in this repo.)
 - Start building! And it should fail. Go to next to fix it.
 
 ### 4.Fix Fizz Buzz and Commit it
 
-- `src/index.js`
-  This is a simple module for `Fizz Buzz` [https://en.wikipedia.org/wiki/Fizz_buzz](https://en.wikipedia.org/wiki/Fizz_buzz)
-
-- `text/test.js`
-  Test code for src/index.js. You can run this with `yarn test`. let's try it.
-
+- `src/index.js`: This is a simple module for _Fizz Buzz_ [https://en.wikipedia.org/wiki/Fizz_buzz](https://en.wikipedia.org/wiki/Fizz_buzz)
+- `text/test.js`: Test code for src/index.js. You can run this with `yarn test`. let's try it.
 - Fix `src/index.js`
-- Make commit
+- Make feature branch
+
+```
+git checkout -b fizzbuzz-1
+```
+
+- Make commit and pull request
 
 ```
 git add src/index.js
 git commit -m "Fix Fizz Buzz"
-git push origin master
+git push origin fizzbuzz-1
 ```
 
 ### 5.See what circleCI did.
