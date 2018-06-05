@@ -37,7 +37,7 @@ jobs:
       - run: yarn test
 
       - run: 
-          command: node ./.circleci/app.js
+          command: node ./.circleci/comment_from_circleci.js
           when: always
 
 
