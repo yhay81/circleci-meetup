@@ -24,10 +24,10 @@ yarn install
 ### 2.Play with .circleci/comment_from_local.js
 
 - You can send comment to GitHub Issues with command `node .cicleci/comment_from_local.js`
-- But before that you need to change some variables in `.cicleci/comment_from_local.js` for fitting your forked repository.
+- But before that you need to change some variables in `.cicleci/comment_from_local.js` for fitting it to your forked repository.
   - `AUTH`: Add your _Personal access tokens_ into `AUTH` to add permission to comment.
     You can get it from https://github.com/settings/tokens.
-    And make sure checking _public_repo Access public repositories_.
+    And make sure checking _public_repo (Access public repositories)_.
   - `USERNAME`: Change it into your username.
   - `ISSUE_NUMBER`: Add issue number you want to add comment. At first, your forked repo has no issues, so you need to make a issue from repo on GitHub web page.
 
@@ -60,7 +60,7 @@ git push origin fizzbuzz-1
 
 ### 5.See what circleCI did.
 
-You can see results, variables, cashing.
+You can see results, variables, cashing from circleCI builds page [https://circleci.com/dashboard](https://circleci.com/dashboard).
 And see comment_from_circleci.js and config.yml.
 
 `.circleci/comment_from_circleci.js` is similar to `.circleci/comment_from_local.js`
